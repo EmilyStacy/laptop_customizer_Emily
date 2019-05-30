@@ -4,14 +4,6 @@ import ListItem from './FormList/ListItem/ListItem';
 
 
 class Form extends Component {
-
-    const features = Object.keys(this.props.features)
-    .map(key => {
-      const options = this.props.features[key].map((item, index) => {
-        const selectedClass = item.name === this.state.selected[key].name ? 'feature__selected' : '';
-        const featureClass = 'feature__option ' + selectedClass;
-        return (<li key={index} className="feature__item">
-        <div className={featureClass}> </div></li>)});
  
     //            <div className={featureClass}
                   
@@ -26,9 +18,15 @@ class Form extends Component {
 
     render(){
         return (
+          const features = Object.keys(this.props.features)
+          .map(key => {
+            const options = this.props.features[key].map((item, index) => {
+              const selectedClass = item.name === this.state.selected[key].name ? 'feature__selected' : '';
+              const featureClass = 'feature__option ' + selectedClass;
+              )}});
             <section className="main__form">
             <h3>TECH SPECS AND CUSTOMIZATIONS</h3>
-            <ListItem key={this.props.features.index} name={this.props.features[key]}> { features } </ListItem>
+            <ListItem key={this.props.features.index} name={this.props.features[key]} dealwithClick = {this.props.updateFeature}  className={featureClass}> { features } </ListItem>
           </section>
         )
     }

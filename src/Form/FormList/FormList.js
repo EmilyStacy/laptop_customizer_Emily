@@ -7,7 +7,7 @@ class ListItem extends Component {
       const options = this.props.features[key].map((item, index) => {
         const selectedClass = item.name === this.state.selected[key].name ? 'feature__selected' : '';
         const featureClass = 'feature__option ' + selectedClass;
-        return (<ListItem key={index} options ={options} className={featureClass} features ={features}>
+        return (<ListItem key={index} options ={options} className={featureClass} features ={features} dealWithClick={this.props.dealWithClick}>
         </ListItem>)})});
         
         return(
