@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
-import './ListItem.css';
-class ListItem extends Component {
+import './FormList.css';
+import ListItem from './ListItem/ListItem'
+class FormList extends Component {
     render(){
-    const features = Object.keys(this.props.features)
-    .map(key => {
+
+      const listItems =Object.entries(this.props.features).map(([key,value]) => {
       const options = this.props.features[key].map((item, index) => {
-        const selectedClass = item.name === this.state.selected[key].name ? 'feature__selected' : '';
-        const featureClass = 'feature__option ' + selectedClass;
-        return (<ListItem key={index} options ={options} className={featureClass} features ={features} dealWithClick={this.props.dealWithClick}>
-        </ListItem>)})});
+      let isSelected = this.props.selected === value
+      return (<ListItem key={key} featureName={key} item={item} options ={options}   
+      handleClick={this.props.dealWithClick} isSelected ={isSelected}>
+      </ListItem>)})});
         
         return(
        <ul className="feature__list">
         <div className="feature__item">
-        {features}
+        {listItems}
         </div>
           </ul>
     )
@@ -21,4 +22,4 @@ class ListItem extends Component {
 
 }
 
-export default ListItem;
+export default FormList;

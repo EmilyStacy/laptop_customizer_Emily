@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Form.css';
-import ListItem from './FormList/ListItem/ListItem';
+import FormList from './FormList/FormList';
 
 
 class Form extends Component {
@@ -17,16 +17,13 @@ class Form extends Component {
 
 
     render(){
+      
         return (
-          const features = Object.keys(this.props.features)
-          .map(key => {
-            const options = this.props.features[key].map((item, index) => {
-              const selectedClass = item.name === this.state.selected[key].name ? 'feature__selected' : '';
-              const featureClass = 'feature__option ' + selectedClass;
-              )}});
             <section className="main__form">
             <h3>TECH SPECS AND CUSTOMIZATIONS</h3>
-            <ListItem key={this.props.features.index} name={this.props.features[key]} dealwithClick = {this.props.updateFeature}  className={featureClass}> { features } </ListItem>
+            <FormList  
+            handleClick = {this.props.updateFeature}  
+            className={this.props.featureClass} features = { this.props.features } selected={this.props.selected}/> 
           </section>
         )
     }

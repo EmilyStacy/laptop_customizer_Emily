@@ -3,11 +3,56 @@ import './App.css';
 import Form from './Form/Form';
 import Cards from './Cards/Cards';
 
+const FEATURES = {
+  Processor: [
+    {
+      name: '17th Generation Intel Core HB (7 Core with donut spare)',
+      cost: 700
+    },
+    {
+      name: 'Professor X AMD Fire Breather with sidewinder technology',
+      cost: 1200
+    }
+  ],
+  "Operating System": [
+    {
+      name: 'Ubuntu Linux 16.04',
+      cost: 200
+    },
+    {
+      name: 'Bodhi Linux',
+      cost: 300
+    }
+  ],
+  "Video Card": [
+    {
+      name: 'Toyota Corolla 1.5v',
+      cost: 1150.98
+    },
+    {
+      name: 'Mind mild breeze 2000',
+      cost: 1345
+    }
+  ],
+  Display: [
+    {
+      name: '15.6" UHD (3840 x 2160) 60Hz Bright Lights and Knobs',
+      cost: 1500
+    },
+    {
+      name: '15.3" HGTV (3840 x 2160) Home makeover edition',
+      cost: 1400
+    },
+  ]
+};
+
 class App extends Component {
+
   constructor(props){
     super(props);
     this.state = {
-      selected: this.props.features
+      selected: FEATURES
+       
       }
     }
 
@@ -15,7 +60,8 @@ class App extends Component {
     const selected = Object.assign({}, this.state.selected);
     selected[feature] = newValue;
     this.setState({
-      selected
+      // pulls out the variable of the name and save it in that key
+      selected:selected   
     });
   }
 
@@ -58,12 +104,7 @@ class App extends Component {
     //           </ul>
     //         </div>
     //       });      
-  const features = Object.keys(this.props.features)       
-  .map(key => {
-  const options = this.props.features[key].map((item, index) => {
-  const selectedClass = item.name === this.state.selected[key].name ? 'feature__selected' : '';
-  const featureClass = 'feature__option ' + selectedClass;
-  })})
+  
     return (
       <div className="App">
         <header>
@@ -72,8 +113,14 @@ class App extends Component {
           <h5>Customize your laptop</h5>  
         </header>      
         <main>
-          <Form features ={features} dealWithClick = {this.props.updateFeature}> </Form>
-          <Cards />
+       <div>  
+      
+      </div> 
+          
+          <Form features ={FEATURES} handleClick = {this.props.updateFeature} selected={this.state.selected}> 
+          
+          </Form>
+          <Cards selected ={this.state.selected} />
         </main>
       </div>
     );
