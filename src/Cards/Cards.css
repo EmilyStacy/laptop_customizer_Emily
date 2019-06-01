@@ -16,3 +16,6 @@
     color: red;
   }
   
+  .main__summary{
+    max-width:50%;
+  }

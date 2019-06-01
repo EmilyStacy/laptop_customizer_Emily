@@ -17,38 +17,20 @@ class Form extends Component {
 
 
     render(){
-      
+        console.log(this.props.handleClick)
+        console.log(this.props.features)
         return (
             <section className="main__form">
             <h3>TECH SPECS AND CUSTOMIZATIONS</h3>
             <FormList  
-            handleClick = {this.props.updateFeature}  
-            className={this.props.featureClass} features = { this.props.features } selected={this.props.selected}/> 
+            handleClick = {this.props.handleClick}  
+            className={this.props.featureClass} features = { this.props.features } 
+            selected={this.props.selected}> {} </FormList>
           </section>
         )
     }
 }
 
-Form.defaultProps = {
-    selected: {
-        Processor: {
-            name: '17th Generation Intel Core HB (7 Core with donut spare)',
-            cost: 700
-          },
-        "Operating System": {
-            name: 'Ubuntu Linux 16.04',
-            cost: 200
-          },
-        "Video Card":{
-            name: 'Toyota Corolla 1.5v',
-            cost: 1150.98
-          },
-        Display: {
-            name: '15.6" UHD (3840 x 2160) 60Hz Bright Lights and Knobs',
-            cost: 1500
-          }
 
-}
-}
 
 export default Form

@@ -20,8 +20,9 @@ class Cards extends Component {
             key={key}
             name={this.props.selected[key].name}
             cost= { new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'})
-                .format(this.props.selected[key].cost)} /> ); 
-
+                .format(this.props.selected[key].cost)} 
+            cost2 = {this.props.selected[key].cost} /> ); 
+            
         return(
             <section className ="main__summary">
             <h3>NEW GREENLEAF 2018</h3>

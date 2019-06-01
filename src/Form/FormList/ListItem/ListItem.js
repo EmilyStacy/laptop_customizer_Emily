@@ -7,7 +7,7 @@ class ListItem extends Component {
       const featureClass = 'feature__option ' + selectedClass;
       
     return(
-    
+      <>
     <div className ={featureClass} 
     onClick={e=> this.props.handleClick(this.props.featureName, this.props.item)}>
     { this.props.item.name}
@@ -15,7 +15,7 @@ class ListItem extends Component {
       .format(this.props.item.cost) })> 
     </div>
       
-    
+    </>
        )
     }
 

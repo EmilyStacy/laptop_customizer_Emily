@@ -8,6 +8,7 @@
   .feature__option {
     margin-top: 4px;
     padding: 2px;
+    width:100%;
   }
   
   .feature__selected {
