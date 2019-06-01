@@ -21,7 +21,7 @@
   
   .summary__option__value {
     grid-area: value;
-    color: lightblue;
+    color: blue;
   }
   
   .summary__option__cost {

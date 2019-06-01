@@ -12,7 +12,7 @@ class ListItem extends Component {
     onClick={e=> this.props.handleClick(this.props.featureName, this.props.item)}>
     { this.props.item.name}
     ({ new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'})
-      .format(this.props.item.cost) })> 
+      .format(this.props.item.cost) }) 
     </div>
       
     </>

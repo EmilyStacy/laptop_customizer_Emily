@@ -6,14 +6,9 @@ import Card from './Card/Card';
 class Cards extends Component {
     
     render(){
-        // be modified
         const total = Object.values(this.props.selected)
            .reduce((acc, curr) => acc + curr.cost, 0);
-        console.log(this.props.selected)
-        console.log(this.props)
-        console.log(Object.values(this.props.selected))
         const summary = Object.keys(this.props.selected).map(key =>
-        //console.log('Whatever you want',key) &&
             <Card
             className="summary__option" 
             

@@ -4,21 +4,8 @@ import FormList from './FormList/FormList';
 
 
 class Form extends Component {
- 
-    //            <div className={featureClass}
-                  
-    //               onClick={e => this.updateFeature(key, item)}>
-    //                 { item.name }
-    //                 ({ new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'})
-    //                   .format(item.cost) })
-    //             </div>
-    //           </li>
-    //         });
-
 
     render(){
-        console.log(this.props.handleClick)
-        console.log(this.props.features)
         return (
             <section className="main__form">
             <h3>TECH SPECS AND CUSTOMIZATIONS</h3>

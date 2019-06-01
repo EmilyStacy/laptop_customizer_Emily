@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
 import './FormList.css';
 import ListItem from './ListItem/ListItem'
+
+function checkisSelected (selected, computerPart, selectedPart) {
+  return selected[computerPart].name === selectedPart
+}
 class FormList extends Component { 
   render(){
-    console.log(listItems) 
-    console.log(this.props.handleClick)
-    // const entries =Object.entries(this.props.features)
-      const listItems =Object.entries(this.props.features).map(([key,value]) => {
-        const options = Object.values(this.props.features[key]).map((item, index) => {
-          //let isSelected = this.props.selected === value
-          let isSelected = true;
-          return (<ListItem key={key} featureName={key} item={item} options ={options}   
+      const listItems =Object.entries(this.props.features).map(([computerPart,partOptions]) => {
+        
+      const options = Object.values(partOptions).map((part) => {
+          let isSelected = checkisSelected(this.props.selected,computerPart, part)
+          return (<ListItem key={part} featureName={computerPart} item={part}    
           handleClick={this.props.handleClick} isSelected ={isSelected} 
           >
         </ListItem>)})
-        return options;
+        return <div><h1>{computerPart}</h1>{options}</div>;
       });
         
         return(
