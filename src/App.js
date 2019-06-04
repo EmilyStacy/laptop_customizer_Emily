@@ -96,7 +96,8 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      selected: App.defaultProps.selected
+      selected: App.defaultProps.selected,
+      'isSelected': false
        
       }
       this.updateFeature = this.updateFeature.bind(this);
@@ -108,7 +109,8 @@ class App extends Component {
     selected[feature] = newValue;
     this.setState({
       // pulls out the variable of the name and save it in that key
-      selected
+      selected,
+      'isSelected': true
     });
   }
 
