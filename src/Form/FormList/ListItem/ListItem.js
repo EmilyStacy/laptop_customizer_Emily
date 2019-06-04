@@ -17,7 +17,7 @@ class ListItem extends Component {
 // };
 
     render(){
-      
+    
       //const selectedClass = this.props.isSelected === this.props.selected[key].name ? 'feature__selected' : '';
      const selectedClass = (this.props.isSelected ? 'feature__selected' : '');
      const featureClass = 'feature__option ' + selectedClass;
