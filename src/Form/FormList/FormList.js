@@ -16,7 +16,7 @@ class FormList extends Component {
           //let isSelected = this.props.selected === value
           let isSelected = checkisSelected(this.props.selected,computerPart, selectedpart)
           return (<ListItem key={part} featureName={computerPart} item={selectedpart}    
-          handleClick={this.props.handleClick} isSelected ={isSelected} selected ={this.props.selected}
+          handleClick={this.props.handleClick} isSelected ={isSelected} 
           >
         </ListItem>)})
         return <div><h1>{computerPart}</h1>{options}</div>;
