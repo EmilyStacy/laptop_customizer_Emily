@@ -97,7 +97,6 @@ class App extends Component {
     super(props);
     this.state = {
       selected: App.defaultProps.selected,
-      'isSelected': false
        
       }
       this.updateFeature = this.updateFeature.bind(this);
@@ -110,7 +109,6 @@ class App extends Component {
     this.setState({
       // pulls out the variable of the name and save it in that key
       selected,
-      'isSelected': true
     });
   }
 
@@ -198,5 +196,6 @@ App.defaultProps = {
   
   }
   }
+  
 
 export default App;  
