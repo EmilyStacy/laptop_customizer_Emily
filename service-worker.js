@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/EmilyStacy/laptop_customizer_Emily/precache-manifest.58a4115f4a69a8935785450ff30ee6c6.js"
+  "/laptop_customizer_Emily/precache-manifest.1941593b8d5ff26205b6ac89cdd90959.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/EmilyStacy/laptop_customizer_Emily/index.html", {
+workbox.routing.registerNavigationRoute("/laptop_customizer_Emily/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
